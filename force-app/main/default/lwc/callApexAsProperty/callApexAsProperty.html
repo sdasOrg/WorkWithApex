@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Call Apex as Prorperty" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={accounts.data}>
+                <template for:each={accounts.data} for:item="acc">
+                    <lightning-layout key={acc.Id} class="slds-m-around_small">
+                        <lightning-layout-item>{acc.Name}</lightning-layout-item>
+                        
+                        <lightning-layout-item>{acc.Phone}</lightning-layout-item>
+                        
+                        <lightning-layout-item>{acc.Industry}</lightning-layout-item>
+                    </lightning-layout>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>
