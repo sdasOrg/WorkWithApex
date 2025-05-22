@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Call Apex as Imparative Method" icon-name="custom:custom31">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Get Accounts" onclick={handleClick}></lightning-button>
+        </div>
+        <template if:true={accounts}>
+            <div class="slds-maround_medium">
+                <template for:each={accounts} for:item="acc">
+                    <lightning-layout key={acc.id} class="slds-m-horizontal_small">
+                        <lightning-layout-item>{acc.Name}</lightning-layout-item>
+                    </lightning-layout>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+    
+</template>
